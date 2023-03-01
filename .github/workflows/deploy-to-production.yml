@@ -7,10 +7,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment:
-      name: staging
-      url: ${{ vars.KUNOICHI_REMOTE_URL }}
+      name: production
     steps:
-steps:
-  - uses: actions/checkout@v2
-  - run: |
-      echo "ths is env=${{ env.env_1 }}"
+    - uses: actions/checkout@v2
+    - run: |
+        echo "ths is a dployment to production test"
